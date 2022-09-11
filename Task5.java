@@ -6,7 +6,6 @@ public class Task5 {
 
         Integer[] ints = {1,2, null,3,4,null};
         checkArray(ints);
-
     }
 
     public static void checkArray(Integer[] arr){
@@ -19,8 +18,7 @@ public class Task5 {
             }
         }
         if (list.size()>0){
-            System.out.println(new RuntimeException("Индексы массива, где значение равно null: "));
-            System.out.print(printList(list));
+            throw new RuntimeException("Индексы массива, где значение равно null: " + printList(list));
         }
     }
 
